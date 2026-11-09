@@ -1,0 +1,13 @@
+﻿# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Export builds
+builds/
+*.exe
+*.pck
+*.apk
+*.aab
+
+# Auto-generated translation files
+*.translation
