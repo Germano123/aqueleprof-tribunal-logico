@@ -1,0 +1,32 @@
+﻿ID,ELEMENTO,TIPO,GATILHO,FALA_OU_INTERACAO,ACAO_DO_SISTEMA
+T00,SISTEMA,LOAD,Ao clicar em TUTORIAL na seleção de fases.,"Executar fade out, carregar a cena do tutorial e exibir loading screen com loadingbar-progress-bg e progresso dourado de 0% a 100%.","Após 100%, executar fade in da cena do tutorial."
+T01,MESTRE,DIALOGUE,Cena carregada.,"MESTRE: ""Lara, antes de aprender a argumentar, você precisa aprender a investigar.""",Abrir diálogo inicial.
+T02,LARA,DIALOGUE,Após fala do Mestre.,"LARA: ""Investigar? Achei que você fosse me ensinar a encontrar o culpado.""",Avançar diálogo.
+T03,MESTRE,DIALOGUE,Após fala de Lara.,"MESTRE: ""Encontrar um culpado é fácil. Difícil é provar que sua conclusão está correta.""",Encerrar diálogo e liberar exploração.
+I01,MESA,INVESTIGATION,Ao clicar na mesa.,"LARA: ""Os documentos estão fora do lugar.""",Registrar inspeção e adicionar evidência dos documentos.
+I02,GAVETA,INVESTIGATION,Ao clicar na gaveta.,"LARA: ""Uma gaveta aberta... vamos ver o que há aqui.""",Revelar a chave e adicionar evidência.
+I03,RELOGIO,INVESTIGATION,Ao clicar no relógio.,"LARA: ""O relógio está parado às 18h32.""",Registrar horário como evidência.
+I04,PORTA,INVESTIGATION,Ao clicar na porta.,"MESTRE: ""Não olhe apenas para a porta. Procure o que ela pode nos dizer.""",Adicionar evidência do registro de abertura.
+I05,JANELA,INVESTIGATION,Ao clicar na janela.,"LARA: ""A janela está fechada. Então essa passagem parece improvável.""",Registrar estado da janela como evidência.
+I06,LIXEIRA,INVESTIGATION,Ao clicar no cesto de lixo.,"MESTRE: ""Você está procurando direito? Não parece ter nada relevante aí.""",Permitir inspeção e revelar fragmento de papel; adicionar evidência.
+I07,COMPUTADOR,INVESTIGATION,Ao clicar no computador.,"LARA: ""O computador foi usado recentemente.""",Adicionar evidência do último acesso.
+I08,ESTANTE,INVESTIGATION,Ao clicar na estante.,"LARA: ""Este livro está fora do lugar... alguém mexeu aqui.""",Registrar livro deslocado como evidência secundária.
+I09,CAMERA,INVESTIGATION,Ao clicar na câmera.,"MESTRE: ""Agora sim. Uma câmera pode dizer muito mais do que uma impressão.""",Adicionar evidência de gravação disponível.
+I10,EVIDENCE_MIN,SYSTEM,Ao coletar a quinta evidência relevante.,"MESTRE: ""Já temos material suficiente para começar a analisar. Mas, se quiser, continue procurando.""",Marcar investigação mínima atingida; manter exploração.
+E01,EVIDENCIAS,TUTORIAL,Primeiro clique no botão EVIDÊNCIAS.,"MESTRE: ""Encontrar uma pista não basta. Agora precisamos descobrir o que ela realmente demonstra.""",Abrir painel e destacar primeiro item.
+E02,EVIDENCIAS,ANALYSIS,Selecionar uma evidência.,"LARA: ""Então é isso que temos de concreto.""",Exibir descrição completa da evidência.
+E03,PROPOSICAO,DIALOGUE,Após análise inicial.,"LARA: ""A porta foi aberta às 18h31. Então quem abriu a porta roubou o documento.""",Apresentar a afirmação no minigame.
+E04,OBJECAO,LOGIC,Confirmar conclusão sem evidência suficiente.,"MESTRE: ""OBJEÇÃO!""",Executar efeito de objeção e iniciar correção.
+E05,OBJECAO,DIALOGUE,Após objeção.,"MESTRE: ""A evidência prova que a porta foi aberta. Ela não prova quem abriu, nem que houve um roubo naquele momento.""",Marcar argumento como não sustentado.
+E06,ARGUMENTO,LOGIC,Após explicação.,"MESTRE: ""Uma boa hipótese pode apontar o caminho. Uma boa conclusão precisa estar apoiada nos fatos.""",Liberar minigame de reforço da proposição.
+L01,VERDADEIRO_FALSO,LOGIC,Primeira decisão lógica.,"MESTRE: ""A porta foi aberta às 18h31. Isso é verdadeiro ou falso?""",Jogador seleciona VERDADEIRO ou FALSO.
+L02,NEGACAO,LOGIC,Após V/F.,"MESTRE: ""Agora negue a afirmação. Se a porta foi aberta às 18h31, qual seria a sua negação?""",Apresentar proposição e negação como decisão.
+L03,E,LOGIC,Após negação.,"MESTRE: ""Quando usamos E, as duas afirmações precisam ser verdadeiras.""",Executar minigame com operador E.
+L04,OU,LOGIC,Após E.,"MESTRE: ""Com OU, basta uma das possibilidades ser verdadeira para a afirmação composta ser verdadeira.""",Executar minigame com operador OU.
+L05,SE_ENTAO,LOGIC,Após OU.,"MESTRE: ""Agora vamos relacionar uma condição a uma consequência: SE uma condição acontece, ENTÃO esperamos determinado resultado.""",Executar minigame introdutório de SE...ENTÃO.
+F01,DESAFIO_FINAL,LOGIC,Após os conceitos básicos.,"MESTRE: ""Agora é com você. Analise os fatos e diga apenas aquilo que eles permitem concluir.""",Iniciar desafio final.
+F02,DESAFIO_FINAL,LOGIC,Apresentar conclusão não sustentada.,"LARA: ""A pessoa registrada pela câmera roubou o documento.""",Exigir identificação de afirmação não sustentada.
+F03,DESAFIO_FINAL,DIALOGUE,Após resposta correta.,"MESTRE: ""Exatamente. Você encontrou uma possibilidade, mas não confundiu possibilidade com prova.""",Prosseguir para encerramento.
+F04,FINAL,DIALOGUE,Após desafio.,"LARA: ""Então investigar não é procurar uma resposta. É descobrir quais respostas os fatos permitem.""",Exibir conclusão.
+F05,FINAL,DIALOGUE,Após fala de Lara.,"MESTRE: ""Agora você está começando a entender.""",Marcar tutorial como concluído.
+F06,FINAL,SYSTEM,Tutorial concluído.,Exibir TUTORIAL CONCLUÍDO e botão COMEÇAR CASO 01.,Liberar Caso 01.

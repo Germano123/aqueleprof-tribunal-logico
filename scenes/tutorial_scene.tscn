@@ -1,0 +1,917 @@
+[gd_scene format=3 uid="uid://ctutorial123"]
+
+[ext_resource type="Script" path="res://scripts/tutorial_controller.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cglli5uqivwd4" path="res://artwork/ui/attorney.png" id="2_attorney"]
+[ext_resource type="Texture2D" uid="uid://sg13r5ms5tu1" path="res://artwork/ui/dialogue-background.png" id="3_dialogue_bg"]
+[ext_resource type="Texture2D" uid="uid://dpfsqtex32v66" path="res://artwork/ui/panel-blue.png" id="4_panel_blue"]
+[ext_resource type="Texture2D" uid="uid://d1dm5gxor8n4r" path="res://artwork/ui/selection-blue.png" id="5_btn_blue"]
+[ext_resource type="Texture2D" uid="uid://b8o1cqudp5yb0" path="res://artwork/ui/selection-gold.png" id="6_btn_gold"]
+[ext_resource type="Texture2D" uid="uid://1dhg85jtmbrf" path="res://artwork/ui/explanation-background.png" id="7_explanation_bg"]
+[ext_resource type="Texture2D" uid="uid://dvyx3rbgj03j0" path="res://artwork/ui/title-background.png" id="8_title_bg"]
+[ext_resource type="Texture2D" uid="uid://bhuf2wu8os3k7" path="res://artwork/scenes/scene-tutorial.png" id="9_scene_tutorial"]
+
+[node name="TutorialScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="RoomContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SceneTutorialBg" type="TextureRect" parent="RoomContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_scene_tutorial")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Obj_PORTA" type="Button" parent="RoomContainer"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 0.0
+offset_right = 165.0
+offset_bottom = 520.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="StatusBadge" type="Label" parent="RoomContainer/Obj_PORTA"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -14.0
+offset_right = 50.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 13
+text = "🚪 PORTA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Obj_RELOGIO" type="Button" parent="RoomContainer"]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 15.0
+offset_right = 800.0
+offset_bottom = 135.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="StatusBadge" type="Label" parent="RoomContainer/Obj_RELOGIO"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -20.0
+offset_right = 45.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 12
+text = "🕒 RELÓGIO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Obj_JANELA" type="Button" parent="RoomContainer"]
+layout_mode = 0
+offset_left = 985.0
+offset_top = 20.0
+offset_right = 1175.0
+offset_bottom = 340.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="StatusBadge" type="Label" parent="RoomContainer/Obj_JANELA"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -14.0
+offset_right = 50.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 13
+text = "🪟 JANELA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Obj_CAMERA" type="Button" parent="RoomContainer"]
+layout_mode = 0
+offset_left = 1145.0
+offset_top = 0.0
+offset_right = 1245.0
+offset_bottom = 75.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="StatusBadge" type="Label" parent="RoomContainer/Obj_CAMERA"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -20.0
+offset_right = 45.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 12
+text = "📹 CÂMERA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Obj_ESTANTE" type="Button" parent="RoomContainer"]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 50.0
+offset_right = 475.0
+offset_bottom = 460.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="StatusBadge" type="Label" parent="RoomContainer/Obj_ESTANTE"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -14.0
+offset_right = 50.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 13
+text = "📚 ESTANTE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Obj_MESA" type="Button" parent="RoomContainer"]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 395.0
+offset_right = 560.0
+offset_bottom = 505.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="StatusBadge" type="Label" parent="RoomContainer/Obj_MESA"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -14.0
+offset_right = 60.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 12
+text = "📑 DOCUMENTOS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Obj_COMPUTADOR" type="Button" parent="RoomContainer"]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 335.0
+offset_right = 840.0
+offset_bottom = 435.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="StatusBadge" type="Label" parent="RoomContainer/Obj_COMPUTADOR"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -14.0
+offset_right = 55.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 12
+text = "💻 COMPUTADOR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Obj_GAVETA" type="Button" parent="RoomContainer"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 525.0
+offset_right = 535.0
+offset_bottom = 665.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="StatusBadge" type="Label" parent="RoomContainer/Obj_GAVETA"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -14.0
+offset_right = 50.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 12
+text = "🗄️ GAVETA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Obj_LIXEIRA" type="Button" parent="RoomContainer"]
+layout_mode = 0
+offset_left = 985.0
+offset_top = 510.0
+offset_right = 1115.0
+offset_bottom = 675.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="StatusBadge" type="Label" parent="RoomContainer/Obj_LIXEIRA"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -14.0
+offset_right = 50.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 12
+text = "🗑️ LIXEIRA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HeaderLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 18.0
+offset_right = 450.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.85, 0.75, 0.45, 1)
+theme_override_font_sizes/font_size = 18
+text = "TUTORIAL: INVESTIGAÇÃO DA SALA"
+
+[node name="EvidenceBtn" type="TextureButton" parent="HUD"]
+custom_minimum_size = Vector2(285, 60)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -305.0
+offset_top = 15.0
+offset_right = -20.0
+offset_bottom = 75.0
+grow_horizontal = 0
+texture_normal = ExtResource("5_btn_blue")
+texture_pressed = ExtResource("6_btn_gold")
+texture_hover = ExtResource("6_btn_gold")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CounterLabel" type="Label" parent="HUD/EvidenceBtn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+text = "EVIDÊNCIAS: 0/5 (Mínimo)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialogueBox" type="Control" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -390.0
+offset_top = -205.0
+offset_right = 390.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Bg" type="TextureRect" parent="DialogueBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_dialogue_bg")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="SpeakerLabel" type="Label" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 8.0
+offset_right = 260.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.12, 0.08, 0.02, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 0.85, 0.7)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 21
+text = "MESTRE"
+vertical_alignment = 1
+
+[node name="DialogueText" type="Label" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 48.0
+offset_right = 745.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 23
+text = "Texto do diálogo aqui..."
+autowrap_mode = 2
+
+[node name="NextIndicator" type="Label" parent="DialogueBox"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -36.0
+offset_right = -20.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.96, 0.8, 0.3, 1)
+theme_override_font_sizes/font_size = 22
+text = "▼"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Characters" type="Control" parent="."]
+visible = false
+z_index = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MestreSprite" type="TextureRect" parent="Characters"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -370.0
+offset_right = 308.0
+offset_bottom = -22.0
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("2_attorney")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LaraSlot" type="Control" parent="Characters"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -308.0
+offset_top = -370.0
+offset_right = -20.0
+offset_bottom = -22.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="PlaceholderBg" type="ColorRect" parent="Characters/LaraSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.12, 0.16, 0.25, 0.85)
+
+[node name="LaraAvatar" type="Label" parent="Characters/LaraSlot"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -50.0
+offset_right = 120.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.95, 0.85, 0.55, 1)
+theme_override_font_sizes/font_size = 18
+text = "👩‍⚖️ LARA
+(Advogada em Treinamento)"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 22
+text = "▼"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EvidencePanel" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DarkOverlay" type="ColorRect" parent="EvidencePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.75)
+
+[node name="PanelFrame" type="TextureRect" parent="EvidencePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -260.0
+offset_right = 400.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_panel_blue")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Content" type="Control" parent="EvidencePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -240.0
+offset_right = 380.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelTitle" type="Label" parent="EvidencePanel/Content"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 10.0
+offset_right = 200.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.95, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 22
+text = "PAINEL DE EVIDÊNCIAS"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="EvidencePanel/Content"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 380.0
+offset_bottom = 400.0
+
+[node name="EvidenceGrid" type="HFlowContainer" parent="EvidencePanel/Content/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+
+[node name="DetailBox" type="VBoxContainer" parent="EvidencePanel/Content"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 60.0
+offset_right = 740.0
+offset_bottom = 370.0
+theme_override_constants/separation = 12
+
+[node name="DetailTitle" type="Label" parent="EvidencePanel/Content/DetailBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.85, 0.35, 1)
+theme_override_font_sizes/font_size = 18
+text = "Selecione uma evidência"
+autowrap_mode = 2
+
+[node name="DetailDesc" type="Label" parent="EvidencePanel/Content/DetailBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Clique em uma evidência da lista para inspecionar os detalhes."
+autowrap_mode = 2
+
+[node name="BtnProceedAnalysis" type="TextureButton" parent="EvidencePanel/Content"]
+visible = false
+layout_mode = 0
+offset_left = 400.0
+offset_top = 380.0
+offset_right = 740.0
+offset_bottom = 440.0
+texture_normal = ExtResource("6_btn_gold")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="EvidencePanel/Content/BtnProceedAnalysis"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.12, 0.08, 0.02, 1)
+theme_override_font_sizes/font_size = 16
+text = "AVANÇAR PARA ANÁLISE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnCloseEvidence" type="Button" parent="EvidencePanel/Content"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_top = 10.0
+offset_bottom = 45.0
+grow_horizontal = 0
+text = "VOLTAR"
+
+[node name="ObjectionOverlay" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ObjectionBanner" type="Label" parent="ObjectionOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -60.0
+offset_right = 300.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(300, 60)
+theme_override_colors/font_color = Color(1, 0.15, 0.15, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_font_sizes/font_size = 80
+text = "OBJEÇÃO!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FlashRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="LogicPanel" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DarkOverlay" type="ColorRect" parent="LogicPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8)
+
+[node name="ExplanationBg" type="TextureRect" parent="LogicPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -425.0
+offset_top = 40.0
+offset_right = 425.0
+offset_bottom = 310.0
+grow_horizontal = 2
+texture = ExtResource("7_explanation_bg")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ConceptLabel" type="Label" parent="LogicPanel"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 48.0
+offset_right = 650.0
+offset_bottom = 84.0
+theme_override_colors/font_color = Color(0.15, 0.1, 0.02, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 0.85, 0.7)
+theme_override_font_sizes/font_size = 18
+text = "1. CONCEITO LÓGICO"
+vertical_alignment = 1
+
+[node name="PromptLabel" type="Label" parent="LogicPanel"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 105.0
+offset_right = 1030.0
+offset_bottom = 270.0
+theme_override_font_sizes/font_size = 20
+text = "Pergunta / Conceito Lógico..."
+autowrap_mode = 2
+
+[node name="OptionsBox" type="VBoxContainer" parent="LogicPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -10.0
+offset_right = 340.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+
+[node name="FeedbackBox" type="Control" parent="LogicPanel"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -340.0
+offset_top = -180.0
+offset_right = 340.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="FeedbackLabel" type="Label" parent="LogicPanel/FeedbackBox"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 17
+text = "Feedback da escolha..."
+autowrap_mode = 2
+
+[node name="BtnNext" type="TextureButton" parent="LogicPanel/FeedbackBox"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -110.0
+offset_top = -60.0
+offset_right = 110.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("6_btn_gold")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="LogicPanel/FeedbackBox/BtnNext"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.12, 0.08, 0.02, 1)
+theme_override_font_sizes/font_size = 18
+text = "AVANÇAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CompletePanel" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DarkOverlay" type="ColorRect" parent="CompletePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.85)
+
+[node name="TitleBg" type="TextureRect" parent="CompletePanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -350.0
+offset_top = 80.0
+offset_right = 350.0
+offset_bottom = 180.0
+grow_horizontal = 2
+texture = ExtResource("8_title_bg")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="TitleLabel" type="Label" parent="CompletePanel/TitleBg"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.12, 0.08, 0.02, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 0.85, 0.7)
+theme_override_font_sizes/font_size = 30
+text = "TUTORIAL CONCLUÍDO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DescLabel" type="Label" parent="CompletePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -60.0
+offset_right = 360.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 0.95, 1)
+theme_override_font_sizes/font_size = 22
+text = "Parabéns! Você aprendeu a investigar os fatos e a separar
+evidência de conclusão.
+
+O CASO 01 FOI DESBLOQUEADO!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnStartCase01" type="TextureButton" parent="CompletePanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -180.0
+offset_right = 150.0
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("6_btn_gold")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CompletePanel/BtnStartCase01"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.12, 0.08, 0.02, 1)
+theme_override_font_sizes/font_size = 20
+text = "COMEÇAR CASO 01"
+horizontal_alignment = 1
+vertical_alignment = 1
