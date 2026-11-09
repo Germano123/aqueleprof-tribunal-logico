@@ -1,0 +1,277 @@
+[gd_scene format=3 uid="uid://c8q1nvy4mainm"]
+
+[ext_resource type="Script" uid="uid://bd0dcka7r32xp" path="res://scripts/main_menu.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cglli5uqivwd4" path="res://artwork/ui/attorney.png" id="2_attorney"]
+[ext_resource type="Texture2D" uid="uid://c11busgvxr55o" path="res://artwork/ui/logo.png" id="3_logo"]
+[ext_resource type="Texture2D" uid="uid://d1dm5gxor8n4r" path="res://artwork/ui/selection-blue.png" id="4_btn_normal"]
+[ext_resource type="Texture2D" uid="uid://b8o1cqudp5yb0" path="res://artwork/ui/selection-gold.png" id="5_btn_hover"]
+[ext_resource type="Texture2D" uid="uid://dvyx3rbgj03j0" path="res://artwork/ui/title-background.png" id="6_title_bg"]
+[ext_resource type="Texture2D" uid="uid://cyt1jkt4b1u2k" path="res://artwork/ui/padlock.png" id="7_padlock"]
+[ext_resource type="Texture2D" uid="uid://djp61oube7lw" path="res://artwork/ui/scene-case-01-locked.png" id="8_case01"]
+[ext_resource type="Texture2D" uid="uid://ccb8g7e5anvnf" path="res://artwork/ui/scene-case-02-locked.png" id="9_case02"]
+[ext_resource type="Texture2D" uid="uid://dcvae8c15dwus" path="res://artwork/ui/scene-case-03-locked.png" id="10_case03"]
+
+[node name="MainMenu" type="Control" unique_id=1356933923]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1444966563]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.08, 0.14, 1)
+
+[node name="MainView" type="Control" parent="." unique_id=1690086648]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Attorney" type="TextureRect" parent="MainView" unique_id=1354903347]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -646.0
+offset_top = 223.0
+offset_right = -358.0
+offset_bottom = 571.0
+grow_horizontal = 2
+scale = Vector2(1.4399997, 1.4399997)
+texture = ExtResource("2_attorney")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Logo" type="TextureRect" parent="MainView" unique_id=691932520]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -616.0
+offset_top = 18.0
+offset_right = -88.0
+offset_bottom = 221.0
+grow_horizontal = 2
+texture = ExtResource("3_logo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MenuContainer" type="VBoxContainer" parent="MainView" unique_id=115295632]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -130.0
+offset_top = -290.0
+offset_right = 130.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="BtnModoHistoria" type="TextureButton" parent="MainView/MenuContainer" unique_id=750800152]
+custom_minimum_size = Vector2(260, 72)
+layout_mode = 2
+texture_normal = ExtResource("4_btn_normal")
+texture_pressed = ExtResource("5_btn_hover")
+texture_hover = ExtResource("5_btn_hover")
+texture_focused = ExtResource("5_btn_hover")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MainView/MenuContainer/BtnModoHistoria" unique_id=1186950296]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 20
+text = "MODO HISTÓRIA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnOpcoes" type="TextureButton" parent="MainView/MenuContainer" unique_id=595061992]
+custom_minimum_size = Vector2(260, 72)
+layout_mode = 2
+texture_normal = ExtResource("4_btn_normal")
+texture_pressed = ExtResource("5_btn_hover")
+texture_hover = ExtResource("5_btn_hover")
+texture_focused = ExtResource("5_btn_hover")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MainView/MenuContainer/BtnOpcoes" unique_id=798835465]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 20
+text = "OPÇÕES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnSair" type="TextureButton" parent="MainView/MenuContainer" unique_id=1171803257]
+custom_minimum_size = Vector2(260, 72)
+layout_mode = 2
+texture_normal = ExtResource("4_btn_normal")
+texture_pressed = ExtResource("5_btn_hover")
+texture_hover = ExtResource("5_btn_hover")
+texture_focused = ExtResource("5_btn_hover")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MainView/MenuContainer/BtnSair" unique_id=1433621240]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 20
+text = "SAIR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CaseSelectionView" type="Control" parent="." unique_id=744309514]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1280.0
+offset_right = 1280.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TutorialButton" type="TextureButton" parent="CaseSelectionView" unique_id=1739939272]
+custom_minimum_size = Vector2(580, 84)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -290.0
+offset_top = 36.0
+offset_right = 290.0
+offset_bottom = 120.0
+grow_horizontal = 2
+texture_normal = ExtResource("6_title_bg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TutorialContent" type="HBoxContainer" parent="CaseSelectionView/TutorialButton" unique_id=685178286]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="PadlockWrapper" type="Control" parent="CaseSelectionView/TutorialButton/TutorialContent" unique_id=2060719859]
+custom_minimum_size = Vector2(40, 50)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="Padlock" type="TextureRect" parent="CaseSelectionView/TutorialButton/TutorialContent/PadlockWrapper" unique_id=1066187035]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_padlock")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CaseSelectionView/TutorialButton/TutorialContent" unique_id=2100239416]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.12, 0.08, 0.02, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 0.85, 0.7)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 28
+text = "TUTORIAL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CasesContainer" type="HBoxContainer" parent="CaseSelectionView" unique_id=194815772]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -180.0
+offset_right = 380.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 36
+alignment = 1
+
+[node name="Case01" type="TextureRect" parent="CaseSelectionView/CasesContainer" unique_id=820052233]
+custom_minimum_size = Vector2(203, 426)
+layout_mode = 2
+texture = ExtResource("8_case01")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Case02" type="TextureRect" parent="CaseSelectionView/CasesContainer" unique_id=1032600245]
+custom_minimum_size = Vector2(201, 426)
+layout_mode = 2
+texture = ExtResource("9_case02")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Case03" type="TextureRect" parent="CaseSelectionView/CasesContainer" unique_id=1299630957]
+custom_minimum_size = Vector2(201, 426)
+layout_mode = 2
+texture = ExtResource("10_case03")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="FadeOverlay" type="ColorRect" parent="." unique_id=221128569]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
